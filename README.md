@@ -15,6 +15,44 @@ https://lightgbm-api.herokuapp.com/
 
 ## このAPIの実行サンプルはこちら
 - https://github.com/takayanagishinnosuke/LightGBM_API_Test/blob/main/index.html
+変数11個をjsonにてpostして、推論結果（true=1, false=0 をjsonで返す)
+
+```bash
+   let JSONdata = {
+          A: $("#A").val(),
+          B: $("#B").val(),
+          C: $("#C").val(),
+          D: $("#D").val(),
+          E: $("#E").val(),
+          F: $("#F").val(),
+          G: $("#G").val(),
+          H: $("#H").val(),
+          I: $("#I").val(),
+          J: $("#J").val(),
+          K: $("#K").val(),
+        };
+```
+```bash
+      $.ajax({
+          type : "POST",
+          url : "https://lightgbm-api.herokuapp.com/",
+          data : JSON.stringify(JSONdata),
+          contentType: 'application/JSON',
+          dataType : 'json',
+          scriptCharset: 'utf-8',
+          success : function(data) {
+              // Success
+              alert("success!");
+              alert(JSON.stringify(data));
+              $("#response").html(JSON.stringify(data));
+          },
+          error : function(data) {
+              // Error
+              alert("error");
+              alert(JSON.stringify(data));
+              $("#response").html(JSON.stringify(data));
+          }
+```
 
 # Author
 特徴量選択、学習過程は下記のレポジトリ!!
