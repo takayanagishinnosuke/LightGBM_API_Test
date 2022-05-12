@@ -1,0 +1,39 @@
+2022-05-11 14:14:54,468:INFO:Initializing predict_model()
+2022-05-11 14:14:54,468:INFO:predict_model(estimator=LGBMClassifier(bagging_fraction=1.0, bagging_freq=2, feature_fraction=0.5,
+               learning_rate=0.005, min_child_samples=41, min_split_gain=0.1,
+               n_estimators=250, num_leaves=100, random_state=947,
+               reg_alpha=0.2, reg_lambda=0.0001), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2022-05-11 14:14:54,468:INFO:Checking exceptions
+2022-05-11 14:14:54,468:INFO:Preloading libraries
+2022-05-11 14:14:54,469:ERROR:Pipeline not found. Exception:
+2022-05-11 14:14:54,471:ERROR:Traceback (most recent call last):
+  File "/Users/shinnosukeikeda/opt/anaconda3/envs/myspace/lib/python3.7/site-packages/pycaret/internal/tabular.py", line 9044, in predict_model
+    dtypes = prep_pipe.named_steps["dtypes"]
+NameError: name 'prep_pipe' is not defined
+
+2022-05-11 14:16:09,537:INFO:Initializing predict_model()
+2022-05-11 14:16:09,537:INFO:predict_model(estimator=LGBMClassifier(bagging_fraction=1.0, bagging_freq=2, feature_fraction=0.5,
+               learning_rate=0.005, min_child_samples=41, min_split_gain=0.1,
+               n_estimators=250, num_leaves=100, random_state=947,
+               reg_alpha=0.2, reg_lambda=0.0001), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2022-05-11 14:16:09,538:INFO:Checking exceptions
+2022-05-11 14:16:09,538:INFO:Preloading libraries
+2022-05-11 14:16:09,538:ERROR:Pipeline not found. Exception:
+2022-05-11 14:16:09,539:ERROR:Traceback (most recent call last):
+  File "/Users/shinnosukeikeda/opt/anaconda3/envs/myspace/lib/python3.7/site-packages/pycaret/internal/tabular.py", line 9044, in predict_model
+    dtypes = prep_pipe.named_steps["dtypes"]
+NameError: name 'prep_pipe' is not defined
+
+2022-05-11 14:35:08,309:INFO:Initializing predict_model()
+2022-05-11 14:35:08,310:INFO:predict_model(estimator=LGBMClassifier(bagging_fraction=1.0, bagging_freq=2, feature_fraction=0.5,
+               learning_rate=0.005, min_child_samples=41, min_split_gain=0.1,
+               n_estimators=250, num_leaves=100, random_state=947,
+               reg_alpha=0.2, reg_lambda=0.0001), probability_threshold=None, encoded_labels=False, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None, drift_kwargs=None)
+2022-05-11 14:35:08,311:INFO:Checking exceptions
+2022-05-11 14:35:08,311:INFO:Preloading libraries
+2022-05-11 14:35:08,311:ERROR:Pipeline not found. Exception:
+2022-05-11 14:35:08,311:ERROR:Traceback (most recent call last):
+  File "/Users/shinnosukeikeda/opt/anaconda3/envs/myspace/lib/python3.7/site-packages/pycaret/internal/tabular.py", line 9044, in predict_model
+    dtypes = prep_pipe.named_steps["dtypes"]
+NameError: name 'prep_pipe' is not defined
+
