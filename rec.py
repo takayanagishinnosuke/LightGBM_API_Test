@@ -30,3 +30,4 @@ def model(data_set):
   print(pre)
   return int(pre) #intにしないとjsonで渡せない
 
+  
