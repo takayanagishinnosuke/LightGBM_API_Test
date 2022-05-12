@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POST Json Tset</THEad></title>
+</head>
+<body>
+  <p>その乗客は別次元へ飛ばされたか</p>
+ 
+  <small><span>Age(年齢:int)</span></small>
+  <input type="text" id="A" name="A" size="10"><br>
+
+  <small><span>CryoSleep(冷凍睡眠:bool No:0 Yes:1)</span></small>
+  <input type="text" id="B" name="B" size="10"><br>
+
+  <small><span>Destination(行先:int) TRAPPIST-1e(0) 55 Cancri-e(1) Other(2)</span></small>
+  <input type="text" id="C" name="C" size="10"><br>
+
+  <small><span>HomePlanet(故郷:int) Earth(0) Europa(1) Other(2)</span></small>
+  <input type="text" id="D" name="D" size="10"><br>
+
+  <small><span>VIP(VIPか:bool No:0 Yes:1)</span></small>
+  <input type="text" id="E" name="E" size="10"><br>
+
+  <small><span>ID(親ID:int 4桁整数)</span></small>
+  <input type="text" id="F" name="F" size="10"><br>
+
+  <small><span>ID(子ID:int 1~7の値</span></small>
+  <input type="text" id="G" name="G" size="10"><br>
+
+  <small><span>Cabin(親ID:int 1~5の値</span></small>
+  <input type="text" id="H" name="H" size="10"><br>
+
+  <small><span>Cabin(区画ID_1:int  1~5の値</span></small>
+  <input type="text" id="I" name="I" size="10"><br>
+
+  <small><span>Cabin(区画ID_2:int  1~5の値</span></small>
+  <input type="text" id="J" name="J" size="10"><br>
+
+  <small><span>Pay(幾ら娯楽で支払いしたか:int 整数値</span></small>
+  <input type="text" id="K" name="K" size="10"><br>
+
+  <button type="submit" id="btn">POST</button>
+  
+  <div>
+    <p>False = 0(無事の可能性が高い): True = 1(転送された可能性が高い)</p>
+    <textarea id="response" cols="120" rows="10" disabled>Rsponce values</textarea>
+  </div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+
+  $(function(){
+  $("#btn").click( function(){
+    $('#responce').html("");
+    let url = $('#url').val();
+    let type = $('#method').val();
+
+      let JSONdata = {
+          A: $("#A").val(),
+          B: $("#B").val(),
+          C: $("#C").val(),
+          D: $("#D").val(),
+          E: $("#E").val(),
+          F: $("#F").val(),
+          G: $("#G").val(),
+          H: $("#H").val(),
+          I: $("#I").val(),
+          J: $("#J").val(),
+          K: $("#K").val(),
+        };
+
+      alert(JSON.stringify(JSONdata));
+
+      $.ajax({
+          type : "POST",
+          url : "https://lightgbm-api.herokuapp.com/",
+          data : JSON.stringify(JSONdata),
+          contentType: 'application/JSON',
+          dataType : 'json',
+          scriptCharset: 'utf-8',
+          success : function(data) {
+              // Success
+              alert("success!");
+              alert(JSON.stringify(data));
+              $("#response").html(JSON.stringify(data));
+          },
+          error : function(data) {
+              // Error
+              alert("error");
+              alert(JSON.stringify(data));
+              $("#response").html(JSON.stringify(data));
+          }
+      });
+  });
+})
+
+</script>
+
+</body>
+</html>
