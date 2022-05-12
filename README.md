@@ -1,5 +1,5 @@
-# LightGBMを使用した2値分類モデルをAPI化したものです。
-- https://lightgbm-api.herokuapp.com/
+# 2値分類タスクにおける自作モデルをAPI化したものです。
+https://lightgbm-api.herokuapp.com/
 
 今回のテーマ: Spaceship Titanic!
 <物語の概要>
