@@ -15,7 +15,7 @@ https://lightgbm-api.herokuapp.com/
 
 ## このAPIの実行サンプルはこちら
 - https://github.com/takayanagishinnosuke/LightGBM_API_Test/blob/main/index.html
-変数11個をjsonにてpostして、推論結果（true=1, false=0 をjsonで返す)
+- 変数11個をjsonにてpostして、推論結果（true=1, false=0 をjsonで返す)
 
 ```bash
    let JSONdata = {
