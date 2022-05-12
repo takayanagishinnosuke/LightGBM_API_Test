@@ -55,5 +55,6 @@ https://lightgbm-api.herokuapp.com/
 ```
 
 # Author
-特徴量選択、学習過程は下記のレポジトリ!!
-(もはやこちらがメイン…)
+https://github.com/takayanagishinnosuke/kaggle_SpacesShip/blob/main/kagle.py
+* 特徴量選択、学習過程は上記のレポジトリにて解説
+* (もはやこちらがメイン…)
